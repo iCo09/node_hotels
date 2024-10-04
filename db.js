@@ -1,10 +1,12 @@
 const mongoose = require('mongoose');
-
+require('dotenv').config();
 // Define MongoDB connection URL
 //const mongoURL = 'mongodb://localhost:27017/hotels';
 
-const mongoURL = 'mongodb://127.0.0.1:27017/hotels';  // Use IPv4 loopback
+//const mongoURL = 'mongodb://127.0.0.1:27017/hotels';  // Use IPv4 loopback
+//mongoDB atlas
 
+const mongoURL = process.env.MONGODB_URL;
 
 mongoose.connect(mongoURL)
 
